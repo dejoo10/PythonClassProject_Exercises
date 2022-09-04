@@ -1,4 +1,6 @@
 
+#Here is exercise 2_6
+
 
 from random import randint
 

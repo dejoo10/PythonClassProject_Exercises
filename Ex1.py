@@ -1,5 +1,5 @@
 
-#here is exe 1 and 2
+#here is exercise 2_1 and 2
 import sys
 User = input("Give name:")
 print("Hello :" + User +"!")

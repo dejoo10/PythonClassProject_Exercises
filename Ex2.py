@@ -1,6 +1,6 @@
 
 #write a program that asks the user for the length and width and prints area and perimeter
-
+#Here is exercise 2_3
 
 import sys
 
