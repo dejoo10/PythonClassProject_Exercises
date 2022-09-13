@@ -8,7 +8,7 @@ def dic_roll(side):
         print(roll)
     return
 
-side_arg = int(input("Enter the number of sides of your dice:..."))
+side_arg = int(input("Enter the numbers of sides of your dice:..."))
 dic_roll(side_arg)
 
 
