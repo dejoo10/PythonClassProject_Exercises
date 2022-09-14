@@ -2,6 +2,29 @@ import sys
 import numbers
 
 
+
+
+
+#This code is not working yet
+
+number = (input("Enter a number to start:..."))
+mylist = []
+while number != "":
+    number = (input("Enter number again:..."))
+    if number == "":
+        break
+    mylist.append(number)
+    mylist.sort(reverse=True)
+print(mylist)
+max = ({max(mylist)})
+min = ({min(mylist)})
+
+
+
+
+sys.exit(0)
+
+
 mylist = []
 x = []
 
@@ -12,9 +35,7 @@ while number != empty:
     number = input("enter number")
     if number == empty:
         break
-    else:
-        mylist.append(number)
-print(mylist)
+    mylist.append(number)
 mylist.sort(reverse=True)
 print(mylist)
 max = ({max(mylist)})
