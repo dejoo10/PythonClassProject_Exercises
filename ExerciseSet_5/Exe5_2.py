@@ -2,9 +2,6 @@ import sys
 import numbers
 
 
-
-
-
 #This code is not working yet
 
 number = (input("Enter a number to start:..."))

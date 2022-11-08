@@ -1,7 +1,5 @@
 import sys
 
-
-
 class Car:
 
     def __init__(self, registration_number, Max_speed, Current_speed = 0, Travelled_distance = 0):
@@ -36,3 +34,4 @@ car1.Travelled_distance = distance
 hours = float(input("Enter the number of hours traveled"))
 car1.drive(hours)
 
+sys.exit(0)

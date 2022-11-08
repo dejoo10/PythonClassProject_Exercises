@@ -27,14 +27,29 @@ class Elevator:
             print ("You are already in the selected floor")
         print(f"you have arrived at floor {self.current_floor}")
 
+class Building:
+    def __init__(self,bottom_floor, top_floor, number_elevators):
+        self.top_floor = top_floor
+        self.bottom_floor = bottom_floor
+        self.number_elevators = number_elevators
 
 
-h = Elevator(-1, 10, 0)
+    @property
+    def elevators(self):
+        elev = []
+        for i in range(self.number_elevators):
+            elev.append(Elevator(self.top_floor))
+            return elev
 
-Floor_select = int(input("select the floor you going to:"))
-h.go_to_floor(Floor_select)
-h.go_to_floor(4)
-h.go_to_floor(9)
-h.go_to_floor(0)
+    def run_elevator(self, floor, number_elevator):
+        for number_elevators in self.elevators[:number_elevator]:
+            number_elevators.go_to_floor(floor)
+
+
+
+build = Building(0, 10, 5)
+build.run_elevator(3,5)
+
+
 
 sys.exit(0)

@@ -1,7 +1,5 @@
 import sys
 
-
-
 class Car:
 
     def __init__(self, registration_number, Max_speed, Current_speed = 0, Travelled_distance = 0):
@@ -31,7 +29,6 @@ car1.Max_speed = 142
 while speed != 0:
     car1.accelerate(speed)
     speed = int(input("Enter the speed:"))
-
 
 #print(f"current speed is {car1.Current_speed}(Km/h)")
 

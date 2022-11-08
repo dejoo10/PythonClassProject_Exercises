@@ -1,27 +1,25 @@
 import sys
+from collections import Counter
 
 #This code is not working properly yet
 
 names = set()
 empty = ""
+en = len(names)
 
-count = 0
+user = input("Enter a name")
 while True:
-    user = input("Enter any name")
+    user = input("Enter a name")
     names.add(user)
-
-    if user == "":
-        break
-        count = count + 1
-for i in names:
-    if user == i in names:
-        print("name exist")
+    print(names)
+    if user in names:
+        print("Exist")
     else:
-        print("name is new")
+        print("new")
+    if user == empty:
+        break
 
 
-
-print(names)
 
 
 

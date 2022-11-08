@@ -44,3 +44,5 @@ nyt = len(list2)
 pi = (4*nxt)/point_total
 print(f"{pi:.3f}")
 
+
+sys.exit(0)

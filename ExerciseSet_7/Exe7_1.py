@@ -34,21 +34,7 @@ else:
     print("Season not found")
 
 
-
-
-
 #mnt = seasons[user-1]
-
-
-
-
-
-
-
-
-
-
-
 
 
 sys.exit(0)

@@ -1,6 +1,5 @@
 import sys
 
-
 class Car:
 
     def __init__(self, registration_number, Max_speed, Current_speed = 0, Travelled_distance = 0):

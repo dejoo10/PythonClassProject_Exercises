@@ -16,8 +16,6 @@ for i in config:
     print(i)
 
 
-#print(config)
-
 
 
 

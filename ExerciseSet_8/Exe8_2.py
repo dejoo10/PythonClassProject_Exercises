@@ -14,3 +14,4 @@ config.execute( synt)
 for i in config:
     print(i)
 
+
