@@ -1,54 +1,49 @@
 import sys
 
+
 class Elevator:
-    def __init__(self, bottom_floor, top_floor, current_floor = 0):
-        self.bottom_floor = bottom_floor
-        self.top_floor=top_floor
-        self.current_floor= current_floor
+    def __init__(self, floors, current_floor = 0):
+        self.floors = floors
+        self.current_floor = current_floor
+
     def floor_up(self):
-        if self.current_floor<self.top_floor:
-            self.current_floor +=1
-            print(f"Going up, current floor is {self.current_floor}")
+        self.current_floor += 1
+        print(f'Going up, current floor is {self.current_floor}')
+
     def floor_down(self):
-        if self.current_floor>self.bottom_floor:
-            self.current_floor -=1
-            print(f"Going down, current floor is {self.current_floor}")
-    def go_to_floor(self, floor):
+        self.current_floor -= 1
+        print(f'Going down, current floor is {self.current_floor}')
 
-        if (int(floor)>self.top_floor) or (int(floor)<self.bottom_floor):
-            print( f"Select the correct floor between {self.bottom_floor} and {self.top_floor}")
-        elif int(floor)>self.current_floor:
-            while int(floor)>(self.current_floor):
+    def go_to_floor(self, selected_floor):
+        if self.current_floor < selected_floor and selected_floor <= self.floors:
+            for i in range(selected_floor):
                 self.floor_up()
-        elif int(floor)<self.current_floor:
-            while int(floor)<self.current_floor:
+
+        elif self.current_floor > selected_floor and self.current_floor - selected_floor > 0:
+            for i in range(self.current_floor - selected_floor):
                 self.floor_down()
-        elif int(floor) == self.current_floor:
-            print ("You are already in the selected floor")
-        print(f"you have arrived at floor {self.current_floor}")
 
+#when building is created, the building creates the required elevators
 class Building:
-    def __init__(self,bottom_floor, top_floor, number_elevators):
-        self.top_floor = top_floor
-        self.bottom_floor = bottom_floor
-        self.number_elevators = number_elevators
-
+    def __init__(self, floors, elevator):
+        self.floors = floors
+        self.elevator = elevator
 
     @property
     def elevators(self):
-        elev = []
-        for i in range(self.number_elevators):
-            elev.append(Elevator(self.top_floor))
-            return elev
+        elevs = []
+        for i in range(self.elevator):
+            elevs.append(Elevator(self.floors))
+        return elevs
 
-    def run_elevator(self, floor, number_elevator):
-        for number_elevators in self.elevators[:number_elevator]:
-            number_elevators.go_to_floor(floor)
+    def run_elevator(self, floor, elevators):
+        for elevator in self.elevators[:elevators]:
+            elevator.go_to_floor(floor)
 
-
-
-build = Building(0, 10, 5)
-build.run_elevator(3,5)
+build = Building(10, 5)
+print(build.floors)
+print(build.elevators)
+build.run_elevator(5,2)
 
 
 
