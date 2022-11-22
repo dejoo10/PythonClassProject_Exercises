@@ -5,7 +5,7 @@ from flask import Flask, request, Response
 
 
 app = Flask(__name__)
-@app.route('/prime_number')
+@app.route('/prime_number/<number>')
 def prime():
     args = request.args
     number = float(args.get("number"))
