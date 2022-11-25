@@ -1,7 +1,7 @@
 import sys
 import requests
 import json
-
+#Any city you add should get result
 # My key = f3c6b7ac910f2327d8538fdf4c514951
 
 def get_temp_kelvin(city, api_key):
