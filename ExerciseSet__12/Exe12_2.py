@@ -19,5 +19,4 @@ celsius = kelvin_to_celcius(kelvin)
 print(f"The temperature in {city} is {round(celsius,1)} degrees celsius")
 
 
-
 sys.exit(0)
